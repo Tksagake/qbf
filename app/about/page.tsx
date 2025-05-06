@@ -1,23 +1,12 @@
+"use client"
 import React from 'react';
+import Navbar from '../components/Navbar';
 
 export default function About() {
   return (
     <main className="w-full overflow-hidden text-white bg-gray-800">
         {/* === NAVBAR === */}
-      <nav className="bg-gray-900 p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="text-white text-2xl font-bold">Quite Bright Films</div>
-          <div className="space-x-4">
-          <a href="/" className='hover:text-yellow-400'>Home</a>
-          <a href="/about" className="hover:text-[#FFD700]">Who We Are</a>
-            <a href="/projects" className="hover:text-[#FFD700]">Our Work</a>
-            <a href="/services" className="hover:text-[#FFD700]">Services</a>
-            <a href="/studios" className="hover:text-[#FFD700]">Studios</a>
-            <a href="/news" className="hover:text-[#FFD700]">News & Insights</a>
-            <a href="/contact" className="hover:text-[#FFD700]">Contact</a>
-          </div>
-        </div>
-      </nav>
+        <Navbar />
 
       <section className="relative bg-gray-800 text-[#e5e5e5] py-24 px-6 md:px-20">
         <img

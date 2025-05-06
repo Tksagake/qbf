@@ -2,24 +2,13 @@
 
 import { a } from 'framer-motion/client'
 import { FaChevronDown, FaEnvelope, FaInstagram, FaLinkedin, FaPlay } from 'react-icons/fa'
+import Navbar from './components/Navbar' 
 
 export default function Home() {
   return (
     <main className="w-full overflow-hidden text-white bg-gray-800">
       {/* === NAVBAR === */}
-      <nav className="bg-gray-900 p-4">
-        <div className="container mx-auto flex justify-between items-center">
-         <a href="/"><div className="text-white text-2xl font-bold">Quite Bright Films</div> </a> 
-          <div className="space-x-4">
-          <a href="/about" className="hover:text-[#FFD700]">Who We Are</a>
-            <a href="/projects" className="hover:text-[#FFD700]">Our Work</a>
-            <a href="/services" className="hover:text-[#FFD700]">Services</a>
-            <a href="/studios" className="hover:text-[#FFD700]">Studios</a>
-            <a href="/news" className="hover:text-[#FFD700]">News & Insights</a>
-            <a href="/contact" className="hover:text-[#FFD700]">Contact</a>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* === HERO SECTION === */}
       <section className="relative w-full h-screen">
@@ -33,18 +22,20 @@ export default function Home() {
         />
 
         <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center px-4 text-center z-10">
-            <h1
+          <h1
             className="text-4xl md:text-7xl font-extrabold drop-shadow-xl bg-clip-text text-transparent"
             style={{
               backgroundImage: 'linear-gradient(to bottom, white, #FFD700, black)',
             }}
-            >
+          >
             Quite Bright Films
-            </h1>
-          <h2 className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent text-yellow-600 drop-shadow-xl"
-           style={{
-            backgroundImage: 'linear-gradient(to bottom, white, #FFD700, black)',
-          }}>
+          </h1>
+          <h2
+            className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent text-yellow-600 drop-shadow-xl"
+            style={{
+              backgroundImage: 'linear-gradient(to bottom, white, #FFD700, black)',
+            }}
+          >
             Quality Beyond Imagination
           </h2>
           <p className="mt-4 text-lg md:text-2xl max-w-2xl text-[#e5e5e5]">
@@ -66,17 +57,17 @@ export default function Home() {
       <section id="who-we-are" className="bg-gray-800 text-[#e5e5e5] py-24 px-6 md:px-20">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">Who We Are</h2>
-        <p className="text-lg leading-relaxed max-w-3xl">
-          QBF is a pan-African creative powerhouse delivering high-end branded content, music videos, and commercials with unmatched precision and soul. With bases in Nairobi and Kampala, we elevate African storytelling to global platforms.
-        </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Who We Are</h2>
+            <p className="text-lg leading-relaxed max-w-3xl">
+              QBF is a pan-African creative powerhouse delivering high-end branded content, music videos, and commercials with unmatched precision and soul. With bases in Nairobi and Kampala, we elevate African storytelling to global platforms.
+            </p>
           </div>
           <div>
-        <img
-          src="/img1.jpg"
-          alt="Who We Are"
-          className="w-full h-auto rounded-xl shadow-lg object-cover"
-        />
+            <img
+              src="/img1.jpg"
+              alt="Who We Are"
+              className="w-full h-auto rounded-xl shadow-lg object-cover"
+            />
           </div>
         </div>
       </section>
@@ -141,4 +132,3 @@ export default function Home() {
     </main>
   )
 }
-
