@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* === Default (Dark Mode First) === */
+:root {
+  --background: #000000;       /* Jet Black */
+  --foreground: #f5f5f5;       /* Platinum */
+  --accent: #ffd700;           /* Royal Gold */
+  --highlight: #e50914;        /* Netflix Red */
+  --charcoal: #202020;         /* Dark Charcoal */
+}
+
+/* === Tailwind Inline Theme Tokens === */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-highlight: var(--highlight);
+  --color-charcoal: var(--charcoal);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* === Light Mode (Optional) === */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #f5f5f5;       /* Platinum */
+    --foreground: #171717;       /* Very Dark Gray */
+  }
+}
+
+/* === Base Body Styling === */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
