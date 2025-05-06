@@ -2,7 +2,7 @@
 
 import { a } from 'framer-motion/client'
 import { FaChevronDown, FaEnvelope, FaInstagram, FaLinkedin, FaPlay } from 'react-icons/fa'
-import Navbar from './components/Navbar' 
+import Navbar from './components/Navbar'
 
 export default function Home() {
   return (
@@ -64,7 +64,7 @@ export default function Home() {
           </div>
           <div>
             <img
-              src="/img1.jpg"
+              src="/logo.jpg"
               alt="Who We Are"
               className="w-full h-auto rounded-xl shadow-lg object-cover"
             />
@@ -72,23 +72,82 @@ export default function Home() {
         </div>
       </section>
 
+      {/* === CAPABILITY STATEMENT === */}
+<section id="capability-statement" className="bg-gray-900 text-[#e5e5e5] py-24 px-6 md:px-20">
+  <div className="max-w-4xl mx-auto space-y-8">
+    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">Capability Statement</h2>
+
+    {/* First Paragraph with Image on the Right */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+      <div>
+        <p className="text-lg leading-relaxed">
+          Quite Bright Films (QBF) is based in Nairobi and is one of the leading film and TV production houses in the Sub Saharan
+          African region. We have been in operation for 21 years. We produce content including Event, Commercial, Factual,
+          Drama, Lifestyle and Corporate programming. At QBF we pride ourselves on producing cutting edge programming for
+          budgets across the board. We have continually invested in world-class equipment, facilities and highly trained personnel.
+          Whatever the budget of any project we undertake, we strive to produce only the highest quality films that always adhere
+          strictly to international broadcast standards.
+        </p>
+      </div>
+      <img src="/img2.jpg" alt="Production Equipment" className="w-full h-auto rounded-xl shadow-lg object-cover" />
+    </div>
+
+    {/* Second Paragraph with Image on the Left */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+      <img src="/img3.jpg" alt="Team at Work" className="w-full h-auto rounded-xl shadow-lg object-cover" />
+      <div>
+        <p className="text-lg leading-relaxed">
+          Over the last twenty one years QBF has built a reputation of being one of the most dynamic, creative and professional
+          film production companies in the region today. We continue to demonstrate an unparalleled ability to be versatile and
+          practical while working in diverse locations, addressing challenging issues, and delivering films that are creative, thought
+          provoking, and informative. Our productions are well researched, compelling, and sensitive to local environments and
+          concerns.
+        </p>
+      </div>
+    </div>
+
+    {/* Third Paragraph with No Image */}
+    <div>
+      <p className="text-lg leading-relaxed">
+        In testament to QBF’s production values, in 2014 we were awarded both the “Best TV Show” at the Kalasha Awards
+        (East Africa’s biggest film & television Award ceremony) and an “Emerald Award” at the Crystal African Advertising
+        Awards. In 2015 we received a nomination for “Best TV Show” and in 2016 we received a Cannes Lion Award for our
+        “Join the Herd” campaign. Our short feature “Poacher” also won “Best Short Film” in 2018.
+      </p>
+    </div>
+  </div>
+</section>
+
       {/* === FEATURED PROJECTS / SHOWREEL === */}
       <section id="projects" className="bg-[#171717] text-[#e5e5e5] py-24 px-6 md:px-20">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12">Our Work</h2>
-        <div className="grid gap-8 md:grid-cols-3">
-          {[1, 2, 3].map((n) => (
-            <div
-              key={n}
-              className="relative group bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition"
-            >
-              <img src={`/img${n}.jpg`} alt={`Project ${n}`} className="w-full h-64 object-cover" />
-              <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                <FaPlay className="text-white text-4xl" />
-              </div>
-            </div>
-          ))}
+      <h2 className="text-4xl md:text-5xl font-bold mb-12">Our Work</h2>
+      <div className="grid gap-8 md:grid-cols-3">
+        {[
+      { id: 1, title: "Project 1", description: "QBF LIVE EXPERIENCE" },
+      { id: 2, title: "Project 2", description: "QBF LIVE EXPERIENCE" },
+      { id: 3, title: "Project 3", description: "QBF LIVE EXPERIENCE" },
+      { id: 11, title: "Project 11", description: "QBF LIVE EXPERIENCE" },
+      { id: 12, title: "Project 12", description: "QBF LIVE EXPERIENCE Part 2" },
+      { id: 13, title: "Project 13", description: "QBF LIVE EXPERIENCE Part 3" },
+      { id: 14, title: "Project 14", description: "QBF LIVE EXPERIENCE Season 2" },
+      { id: 15, title: "Project 15", description: "QBF LIVE EXPERIENCE Season 3" },
+      { id: 16, title: "Project 16", description: "QBF LIVE EXPERIENCE Season 4" },
+        ].map((project) => (
+      <div
+        key={project.id}
+        className="relative group bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition"
+        onClick={() => window.open('https://www.youtube.com/watch?v=8mo-VY0ztgs&embeds_referring_euri=https%3A%2F%2Fgca.org%2F', '_blank')}
+      >
+        <img src={`/img${project.id}.jpg`} alt={project.title} className="w-full h-64 object-cover" />
+        <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
+          <FaPlay className="text-white text-4xl mb-2" />
+          <p className="text-white text-center px-4">{project.description}</p>
         </div>
-      </section>
+      </div>
+        ))}
+      </div>
+    </section>
+
 
       {/* === STUDIO LOCATIONS === */}
       <section id="studios" className="bg-gray-900 text-[#e5e5e5] py-24 px-6 md:px-20">
@@ -106,7 +165,7 @@ export default function Home() {
                 <p className="text-sm mt-2 text-gray-300">
                   High-spec equipment, remote team capabilities, and a focus on top-tier quality.
                 </p>
-              </div>
+               </div>
             </div>
           ))}
         </div>
