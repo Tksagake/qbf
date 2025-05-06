@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import Navbar from '../components/Navbar';
+import { FaEnvelope, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export default function Projects() {
   return (
@@ -50,6 +51,24 @@ export default function Projects() {
           ))}
         </div>
       </section>
+
+      <footer className="bg-gray-950 text-[#e5e5e5] py-12 px-6 md:px-20">
+              <div className="flex flex-col md:flex-row justify-between items-center">
+                <div className="text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} QBF Productions</div>
+                <div className="flex space-x-6 text-lg">
+                  <a href="#" className="hover:text-[#FFD700]">
+                    <FaInstagram />
+                  </a>
+                  <a href="#" className="hover:text-[#FFD700]">
+                    <FaLinkedin />
+                  </a>
+                  <a href="#" className="hover:text-[#FFD700]">
+                    <FaEnvelope />
+                  </a>
+                </div>
+              </div>
+            </footer>
+            
     </main>
   );
 }

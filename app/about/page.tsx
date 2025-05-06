@@ -1,56 +1,110 @@
 "use client"
+
 import React from 'react';
 import Navbar from '../components/Navbar';
+import { FaEnvelope, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export default function About() {
   return (
-    <main className="w-full overflow-hidden text-white bg-gray-800">
-        {/* === NAVBAR === */}
-        <Navbar />
+    <main className="w-full overflow-hidden text-white bg-gray-900">
+      {/* === NAVBAR === */}
+      <Navbar />
 
-      <section className="relative bg-gray-800 text-[#e5e5e5] py-24 px-6 md:px-20">
-        <img
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-50"
-          src="/img1.jpg"
-          alt="Background"
-        />
-        <div className="relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Mission & Legacy</h2>
-          <p className="text-lg leading-relaxed max-w-3xl">
+      {/* Hero Section */}
+      <section className="relative bg-gray-800 text-white h-screen flex items-center justify-center">
+        <div className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url("/img1.jpg")',
+          opacity: 0.5
+        }}>
+        </div>
+        <div className="relative z-10 text-center max-w-3xl px-4">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4">Mission & Legacy</h1>
+          <p className="text-lg md:text-xl leading-relaxed">
             Quite Bright Films is dedicated to elevating African storytelling to global platforms. With a rich legacy of award-winning productions, we strive to deliver high-end branded content, music videos, and commercials with unmatched precision and soul.
           </p>
         </div>
       </section>
 
+      {/* Team Bios */}
       <section className="bg-gray-800 text-[#e5e5e5] py-24 px-6 md:px-20">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">Team Bios</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center">Meet the Team</h2>
         <div className="grid md:grid-cols-3 gap-10">
           {/* Example team member */}
-          <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg">
-            <img src="/team1.jpg" alt="Team Member" className="w-full h-48 object-cover" />
+          <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105">
+            <img src="/avatar.jpg" alt="Team Member" className="w-full h-64 object-cover" />
             <div className="p-6">
-              <h3 className="text-xl font-semibold">Amber L.</h3>
-              <p className="text-sm mt-2 text-gray-300">Director & Founder</p>
+              <h3 className="text-2xl font-semibold">Mzee E. Mzee</h3>
+              <p className="text-gray-300">Director & Founder</p>
             </div>
           </div>
           {/* Add more team members as needed */}
+          <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105">
+            <img src="/ceo.jpg" alt="Team Member" className="w-full h-64 object-cover" />
+            <div className="p-6">
+              <h3 className="text-2xl font-semibold">Kijana E Kijaana</h3>
+              <p className="text-gray-300">Co-Founder & Producer</p>
+            </div>
+          </div>
+          <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105">
+            <img src="/avatar.jpg" alt="Team Member" className="w-full h-64 object-cover" />
+            <div className="p-6">
+              <h3 className="text-2xl font-semibold">Mzee F. Mzee</h3>
+              <p className="text-gray-300">Producer & Co-Founder</p>
+            </div>
+          </div>
         </div>
       </section>
 
+      {/* Awards/Timeline */}
       <section className="bg-gray-800 text-[#e5e5e5] py-24 px-6 md:px-20">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">Awards/Timeline</h2>
-        <div className="space-y-6">
-          <div>
-            <h3 className="text-2xl font-semibold">2014</h3>
-            <p className="text-lg">Best TV Show at the Kalasha Awards</p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold">2016</h3>
-            <p className="text-lg">Cannes Lion Award for "Join the Herd" campaign</p>
-          </div>
-          {/* Add more awards/timeline entries as needed */}
+  <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center">Awards & Timeline</h2>
+  <div className="relative">
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="w-1 bg-gray-300 h-full"></div>
+    </div>
+    <div className="relative z-10 space-y-12">
+      {/* Timeline Item */}
+      <div className="flex flex-col md:flex-row items-center md:space-x-8 space-y-4 md:space-y-0">
+        <div className="flex-shrink-0 w-12 h-12 bg-[#FFD700] text-black rounded-full flex items-center justify-center text-xl font-bold">
+          2014
         </div>
-      </section>
+        <div className="flex-1 bg-gray-900 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+          <h3 className="text-2xl font-semibold">Best TV Show</h3>
+          <p className="text-lg text-gray-300">Kalasha Awards</p>
+        </div>
+      </div>
+      {/* Timeline Item */}
+      <div className="flex flex-col md:flex-row-reverse items-center md:space-x-reverse md:space-x-8 space-y-4 md:space-y-0">
+        <div className="flex-shrink-0 w-12 h-12 bg-[#FFD700] text-black rounded-full flex items-center justify-center text-xl font-bold">
+          2016
+        </div>
+        <div className="flex-1 bg-gray-900 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+          <h3 className="text-2xl font-semibold">Cannes Lion Award</h3>
+          <p className="text-lg text-gray-300">"Join the Herd" campaign</p>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+<footer className="bg-gray-950 text-[#e5e5e5] py-12 px-6 md:px-20">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} QBF Productions</div>
+          <div className="flex space-x-6 text-lg">
+            <a href="#" className="hover:text-[#FFD700]">
+              <FaInstagram />
+            </a>
+            <a href="#" className="hover:text-[#FFD700]">
+              <FaLinkedin />
+            </a>
+            <a href="#" className="hover:text-[#FFD700]">
+              <FaEnvelope />
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
