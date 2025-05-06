@@ -34,7 +34,7 @@ export default function About() {
           <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105">
             <img src="/avatar.jpg" alt="Team Member" className="w-full h-64 object-cover" />
             <div className="p-6">
-              <h3 className="text-2xl font-semibold">Mzee E. Mzee</h3>
+              <h3 className="text-2xl font-semibold">Tom Browne</h3>
               <p className="text-gray-300">Director & Founder</p>
             </div>
           </div>
@@ -42,14 +42,14 @@ export default function About() {
           <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105">
             <img src="/ceo.JPG" alt="Team Member" className="w-full h-64 object-cover" />
             <div className="p-6">
-              <h3 className="text-2xl font-semibold">Kijana E Kijaana</h3>
+              <h3 className="text-2xl font-semibold">Sikolia M. W</h3>
               <p className="text-gray-300">Co-Founder & Producer</p>
             </div>
           </div>
           <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105">
             <img src="/avatar.jpg" alt="Team Member" className="w-full h-64 object-cover" />
             <div className="p-6">
-              <h3 className="text-2xl font-semibold">Mzee F. Mzee</h3>
+              <h3 className="text-2xl font-semibold">Malcolm X</h3>
               <p className="text-gray-300">Producer & Co-Founder</p>
             </div>
           </div>
