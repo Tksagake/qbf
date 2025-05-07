@@ -51,9 +51,7 @@ export default function Contact() {
       <Navbar />
       <ToastContainer />
       
-      <div className="fixed top-0 left-0 mt-16 ml-4 z-20 transition-transform duration-300 ease-in-out">
-        <img src="/logo.jpg" alt="Logo" className={`object-cover shadow-lg transition-all duration-300 ease-in-out ${logoSize}`} />
-      </div>
+      
 
       {/* Hero Section */}
       <section className="relative bg-gray-800 text-white h-screen flex flex-col items-center justify-center px-4">

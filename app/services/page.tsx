@@ -29,9 +29,7 @@ export default function Services() {
     <main className="w-full overflow-hidden text-white bg-gray-800">
        <Navbar />
 
-       <div className="fixed top-0 left-0 mt-16 ml-4 z-20 transition-transform duration-300 ease-in-out">
-        <img src="/logo.jpg" alt="Logo" className={`object-cover shadow-lg transition-all duration-300 ease-in-out ${logoSize}`} />
-      </div>
+       
 
       <section className="relative w-full h-96">
         <img
