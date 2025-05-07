@@ -1,12 +1,37 @@
 "use client"
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaChevronDown, FaEnvelope, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 
 export default function Services() {
+
+  const [logoSize, setLogoSize] = useState('w-42 h-42');
+  
+
+   useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setLogoSize('w-24 h-24');
+        } else {
+          setLogoSize('w-42 h-42');
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+  
+    
+
   return (
     <main className="w-full overflow-hidden text-white bg-gray-800">
        <Navbar />
+
+       <div className="fixed top-0 left-0 mt-16 ml-4 z-20 transition-transform duration-300 ease-in-out">
+        <img src="/logo.jpg" alt="Logo" className={`object-cover shadow-lg transition-all duration-300 ease-in-out ${logoSize}`} />
+      </div>
 
       <section className="relative w-full h-96">
         <img

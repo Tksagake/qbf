@@ -1,12 +1,37 @@
 "use client"
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import { FaEnvelope, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { div } from 'framer-motion/client';
 
 export default function Projects() {
+
+  const [logoSize, setLogoSize] = useState('w-42 h-42');
+  
+
+   useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setLogoSize('w-24 h-24');
+        } else {
+          setLogoSize('w-42 h-42');
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+  
+    
   return (
     <main className="w-full overflow-hidden text-white bg-gray-800">
       <Navbar />
+
+      <div className="fixed top-0 left-0 mt-16 ml-4 z-20 transition-transform duration-300 ease-in-out">
+        <img src="/logo.jpg" alt="Logo" className={`object-cover shadow-lg transition-all duration-300 ease-in-out ${logoSize}`} />
+      </div>
 
       <section className="relative">
         <img
@@ -33,19 +58,19 @@ export default function Projects() {
 
       <section className="bg-gray-800 text-[#e5e5e5] py-24 px-6 md:px-20">
        
-        <div className="grid gap-8 md:grid-cols-3">
-          {[1, 2, 3].map((n) => (
+        <div className="grid gap-8 md:grid-cols-3 justify-center items-center">
+          {[1,].map((n) => (
             <div key={n} className="relative group bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
               <video
-                className="w-full h-64 object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-                src={`/trailer${n}.mp4`}
+          className="w-full h-64 object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          src={`/trailer${n}.mp4`}
               />
               <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                <p className="text-white text-2xl">Trailer {n} Details</p>
+          <p className="text-white text-2xl">COMING SOON!</p>
               </div>
             </div>
           ))}
