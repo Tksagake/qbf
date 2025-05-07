@@ -37,7 +37,6 @@ const Navbar = () => {
     { path: "/projects", icon: <FaBriefcase className="mr-2" />, label: "Our Work" },
     { path: "/services", icon: <FaCogs className="mr-2" />, label: "Services" },
     { path: "/studios", icon: <FaBuilding className="mr-2" />, label: "Studios" },
-    { path: "/news", icon: <FaNewspaper className="mr-2" />, label: "News & Insights" },
     { path: "/contact", icon: <FaEnvelope className="mr-2" />, label: "Contact" },
   ];
 
